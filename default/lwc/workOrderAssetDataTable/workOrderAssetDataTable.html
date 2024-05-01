@@ -1,0 +1,15 @@
+<template>
+    <template if:true={assets}>
+        <lightning-datatable
+            key-field="Id"
+            data={assets}
+            columns={columns}
+            onrowaction={handleRowAction}
+            hide-checkbox-column
+            show-row-number-column>
+        </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        <p>{error}</p>
+    </template>
+</template>

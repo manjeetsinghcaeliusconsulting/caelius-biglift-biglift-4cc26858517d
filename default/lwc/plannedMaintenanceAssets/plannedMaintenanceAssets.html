@@ -1,0 +1,14 @@
+<template>
+    <template if:true={assets}>
+        <lightning-datatable
+            key-field="Id"
+            data={assets}
+            columns={columns}
+            hide-checkbox-column
+            show-row-number-column>
+        </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        <p>Error fetching assets: {error}</p>
+    </template>
+</template>
